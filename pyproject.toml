@@ -1,0 +1,9 @@
+[tool.ruff]
+select = ["I", "E", "F", "B", "Q"]
+exclude = ["venv", "migrations"]
+line-length = 99
+target-version = "py311"
+
+[tool.black]
+line-length = 99
+target-version = ['py311']
