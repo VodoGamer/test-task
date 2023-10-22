@@ -6,7 +6,7 @@ services:
     container_name: ${PROJECT_NAME}_db
     restart: always
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data/
+      - postgres_data:/var/lib/postgresql/data/
     env_file:
       - .env
     expose:
@@ -26,3 +26,6 @@ services:
       - db
     ports:
       - ${BACKEND_PORT}:8000
+
+volumes:
+  postgres_data:
